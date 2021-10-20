@@ -29,19 +29,19 @@ const Navbar = () => {
   return (
     <>
       <Nav>
-        <NavLink to="/">
+        <NavLink to="/appPagos">
           <img src={logo} width= "100%" height= "100%" alt="logo" />
         </NavLink>
         <Bars />
         <NavMenu>
+          <NavLink to="/appPagos" activeStyle>
+          Inicio
+          </NavLink>
           <NavLink to="/about" activeStyle>
           Acerca de
           </NavLink>
           <NavLink to="/productos" activeStyle>
           Productos
-          </NavLink>
-          <NavLink to="/recursos" activeStyle>
-          Recursos
           </NavLink>
           <NavLink to="/contacto" activeStyle>
           Contacto
