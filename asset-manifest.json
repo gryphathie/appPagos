@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/appPagos/static/css/main.a99ad1c9.chunk.css",
-    "main.js": "/appPagos/static/js/main.ad145a29.chunk.js",
-    "main.js.map": "/appPagos/static/js/main.ad145a29.chunk.js.map",
+    "main.js": "/appPagos/static/js/main.f54812d1.chunk.js",
+    "main.js.map": "/appPagos/static/js/main.f54812d1.chunk.js.map",
     "runtime-main.js": "/appPagos/static/js/runtime-main.1b27f625.js",
     "runtime-main.js.map": "/appPagos/static/js/runtime-main.1b27f625.js.map",
     "static/css/2.2797de26.chunk.css": "/appPagos/static/css/2.2797de26.chunk.css",
@@ -23,6 +23,6 @@
     "static/css/2.2797de26.chunk.css",
     "static/js/2.f8646a83.chunk.js",
     "static/css/main.a99ad1c9.chunk.css",
-    "static/js/main.ad145a29.chunk.js"
+    "static/js/main.f54812d1.chunk.js"
   ]
 }
