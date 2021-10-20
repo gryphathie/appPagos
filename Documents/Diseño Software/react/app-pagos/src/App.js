@@ -23,7 +23,6 @@ function App() {
         <Route path="/about" component={About} />
         <Route path="/login" component={Login} />
         <Route path="/signin" component={Signin} />
-        <Route path="/contacto" component={Sidebar} />
       </Switch>
     </Router>
   );

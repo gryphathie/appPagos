@@ -2,9 +2,10 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 
 
-const Table = () => {
+const Table = (props) => {
   const gastos = [
-    {id:0, fecha:"01/10/2021", hora:"10:00", nota:"Chicles", cantidad:10, categoria:"Comida"}
+    {id:0, fecha:"01/10/2021", hora:"10:00", nota:"Chicles", cantidad:10, categoria:"Comida"},
+    {id:1, fecha: props.fecha, hora: props.hora, nota: props.nota, cantidad: props.cantidad, categoria: props.categoria},
   ]
 
   const renderGasto = (gasto, index) => {

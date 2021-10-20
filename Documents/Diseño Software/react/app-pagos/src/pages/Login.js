@@ -73,11 +73,13 @@ const Login = () => {
       </>
     ):(
       <>
-        <Doughnu name={name} />
+        <div  style={{backgroundColor:"#E7E7E7"}}>
+        {/*<Doughnu name={name} />*/}
         <Agregar />
         <div className="d-flex justify-content-center pb-3">
           <button onClick={() => setSesion(false)}>Cerrar Sesion</button>
         </div>
+      </div>
       </>
     )}
     </>

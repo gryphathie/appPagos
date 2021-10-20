@@ -37,10 +37,11 @@ const Doughnu = (props) =>{
 
   return (
     <>
-    <div className="d-flex justify-content-center py-2" >
-      <h1>- Bienvenido {props.name} -</h1>
-    </div>
-    <div className="card border border-2 shadow-lg p-3 mb-5 bg-body rounded px-5 py-3 mx-5">
+    <div className="card border border-2 shadow-lg p-3 mb-5 bg-body rounded px-5 py-3 mx-5 mt-4">
+      <div className="d-flex justify-content-center py-2">
+        <h1>-- Bienvenido --</h1>
+      </div>
+    <span className="border-bottom pt-1"></span>
     <div className="d-flex justify-content-center py-3">
       <h2 className="border-bottom-0">Tus gastos del mes:</h2>
     </div>
@@ -63,7 +64,6 @@ const Doughnu = (props) =>{
            </div>
          </div>
        </div>
-
     </>
   );
 }

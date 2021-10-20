@@ -1,9 +1,46 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import Table from './Table';
+import Doughnu from './Doughnu';
+import {Tabla} from './Tabla';
+import {v4 as uuidv4} from "uuid"
 
 const Agregar = () => {
+  const [todos, setTodos] = useState([
+    {id:1, date:"01/10/2021", time:"10:00", note:"Ramen", quantity:530, category:"Comida"},
+    {id:2, date:"01/10/2021", time:"10:00", note:"Cine", quantity:200, category:"Entretenimiento"},
+    {id:3, date:"01/10/2021", time:"10:00", note:"Medicinas", quantity:330, category:"Farmacia"},
+    {id:4, date:"01/10/2021", time:"10:00", note:"Chamarra", quantity:860, category:"Ropa"},
+    {id:5, date:"01/10/2021", time:"10:00", note:"Uber", quantity:120, category:"Transporte"},
+
+  ]);
+  const todoDateRef = useRef();
+  const todoTimeRef = useRef();
+  const todoNoteRef = useRef();
+  const todoQuaRef = useRef();
+  const todoCatRef = useRef();
+
+  const handleTodoAdd = () => {
+    const date = todoDateRef.current.value;
+    const time = todoTimeRef.current.value;
+    const note = todoNoteRef.current.value;
+    const quantity = todoQuaRef.current.value;
+    const category = todoCatRef.current.value;
+    if (date !== "" && time !== "" && note !== "" && quantity !== "" && category !== ""){
+
+    setTodos((prevTodos) =>{
+        return [...prevTodos, {id: uuidv4(), date, time, note, quantity, category}];
+    });
+    todoDateRef.current.value=null;
+    todoTimeRef.current.value=null;
+    todoNoteRef.current.value=null;
+    todoQuaRef.current.value=null;
+    todoCatRef.current.value=null;
+  } else {
+      alert("Campos incompletos, verifica tu información");
+  }
+};
+
   const [fecha, setFecha] = useState("");
   const [hora, setHora] = useState("");
   const [cantidad, setCantidad] = useState("");
@@ -36,6 +73,7 @@ const Agregar = () => {
 
   return (
     <>
+    <Doughnu todos={todos} />
     <Form onSubmit={onSubmite}>
     <div className="align-self-center py-2">
       <div className="card border border-2 shadow-lg p-3 mb-5 bg-body rounded px-5 py-3 mx-5">
@@ -52,6 +90,7 @@ const Agregar = () => {
                   autoFocus
                   name="fecha"
                   type="date"
+                  ref= {todoDateRef}
                   value={fecha}
                   onChange={onChange}
                   />
@@ -64,6 +103,7 @@ const Agregar = () => {
                     autoFocus
                     name="hora"
                     type="time"
+                    ref= {todoTimeRef}
                     value={hora}
                     onChange={onChange}
                     />
@@ -76,6 +116,7 @@ const Agregar = () => {
                     autoFocus
                     name="cantidad"
                     type="number"
+                    ref= {todoQuaRef}
                     placeholder="$"
                     value={cantidad}
                     onChange={onChange}
@@ -86,11 +127,11 @@ const Agregar = () => {
             <div className="row py-4">
               <div className="col col-lg-5">
                 <label>Descripción:</label>
-                <textarea className="form-control" id="nota" name="nota" rows="3" onChange={onChange}></textarea>
+                <textarea className="form-control" id="nota" ref= {todoNoteRef} name="nota" rows="3" onChange={onChange}></textarea>
               </div>
               <div className="col col-lg-3 ms-5">
                 <label>Categoría:</label>
-                <select className="form-control" id="categoria" name="categoria" onChange={onChange}>
+                <select className="form-control" id="categoria" ref= {todoCatRef} name="categoria" onChange={onChange}>
                   <option> </option>
                   <option>Comida</option>
                   <option>Entretenimiento</option>
@@ -100,12 +141,18 @@ const Agregar = () => {
                 </select>
               </div>
             </div>
-            <Button variant="danger" block size="lg" type="submit">Agregar</Button>
+
+            <Button variant="danger" block size="lg" onClick={handleTodoAdd}>Agregar</Button>
           </div>
+          <span className="border-bottom pt-5"></span>
+          <div className="mt-3 py-3">
+            <h3 className="text-center p-3"> Tabla de gastos: </h3>
+            <Tabla todos={todos} />
+          </div>
+
       </div>
     </div>
     </Form>
-    <Table />
     </>
   );
 
