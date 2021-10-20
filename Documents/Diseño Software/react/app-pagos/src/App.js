@@ -12,7 +12,8 @@ import Login from './pages/Login';
 import Signin from './pages/Signin';
 import Doughnu from './pages/Doughnu';
 import Agregar from './pages/Agregar';
-import Sidebar from './components/Sidebar';
+import Contacto from './pages/Contacto';
+
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Switch>
         <Route path="/appPagos" exact component={Home} />
         <Route path="/about" component={About} />
+        <Route path="/contacto" component={Contacto} />
         <Route path="/login" component={Login} />
         <Route path="/signin" component={Signin} />
       </Switch>
