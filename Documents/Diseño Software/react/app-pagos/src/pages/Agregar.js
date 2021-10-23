@@ -7,11 +7,11 @@ import {v4 as uuidv4} from "uuid"
 
 const Agregar = () => {
   const [todos, setTodos] = useState([
-    {id:1, date:"01/10/2021", time:"10:00", note:"Ramen", quantity:530, category:"Comida"},
-    {id:2, date:"01/10/2021", time:"10:00", note:"Cine", quantity:200, category:"Entretenimiento"},
-    {id:3, date:"01/10/2021", time:"10:00", note:"Medicinas", quantity:330, category:"Farmacia"},
-    {id:4, date:"01/10/2021", time:"10:00", note:"Chamarra", quantity:860, category:"Ropa"},
-    {id:5, date:"01/10/2021", time:"10:00", note:"Uber", quantity:120, category:"Transporte"},
+    {id:1, date:"01/10/2021", time:"10:00", note:"Ramen", quantity:530, category:"Comida", completed: false},
+    {id:2, date:"01/10/2021", time:"10:00", note:"Cine", quantity:200, category:"Entretenimiento", completed: false},
+    {id:3, date:"01/10/2021", time:"10:00", note:"Medicinas", quantity:330, category:"Farmacia", completed: false},
+    {id:4, date:"01/10/2021", time:"10:00", note:"Chamarra", quantity:860, category:"Ropa", completed: false},
+    {id:5, date:"01/10/2021", time:"10:00", note:"Uber", quantity:120, category:"Transporte", completed: false},
 
   ]);
   const todoDateRef = useRef();
@@ -20,16 +20,29 @@ const Agregar = () => {
   const todoQuaRef = useRef();
   const todoCatRef = useRef();
 
+  const borrarElemento = (id) => {
+    const newTodos = [...todos];
+    const todo = newTodos.find((todo) => todo.id === id);
+    todo.completed = !todo.completed;
+    setTodos(newTodos);
+  };
+
+  const handleClearAll = () => {
+    const newTodos = todos.filter((todo) => !todo.completed);
+    setTodos(newTodos);
+  }
   const handleTodoAdd = () => {
     const date = todoDateRef.current.value;
     const time = todoTimeRef.current.value;
     const note = todoNoteRef.current.value;
     const quantity = todoQuaRef.current.value;
     const category = todoCatRef.current.value;
+
+
     if (date !== "" && time !== "" && note !== "" && quantity !== "" && category !== ""){
 
     setTodos((prevTodos) =>{
-        return [...prevTodos, {id: uuidv4(), date, time, note, quantity, category}];
+        return [...prevTodos, {id: uuidv4(), date, time, note, quantity, category, completed: false}];
     });
     todoDateRef.current.value=null;
     todoTimeRef.current.value=null;
@@ -147,7 +160,7 @@ const Agregar = () => {
           <span className="border-bottom pt-5"></span>
           <div className="mt-3 py-3">
             <h3 className="text-center p-3"> Tabla de gastos: </h3>
-            <Tabla todos={todos} />
+            <Tabla todos={todos} borrarElemento={borrarElemento} handleClearAll={handleClearAll}/>
           </div>
 
       </div>
