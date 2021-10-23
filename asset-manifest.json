@@ -1,29 +1,29 @@
 {
   "files": {
     "main.css": "/appPagos/static/css/main.a99ad1c9.chunk.css",
-    "main.js": "/appPagos/static/js/main.ecb95050.chunk.js",
-    "main.js.map": "/appPagos/static/js/main.ecb95050.chunk.js.map",
-    "runtime-main.js": "/appPagos/static/js/runtime-main.6110baea.js",
-    "runtime-main.js.map": "/appPagos/static/js/runtime-main.6110baea.js.map",
+    "main.js": "/appPagos/static/js/main.603f2293.chunk.js",
+    "main.js.map": "/appPagos/static/js/main.603f2293.chunk.js.map",
+    "runtime-main.js": "/appPagos/static/js/runtime-main.c0dc89ae.js",
+    "runtime-main.js.map": "/appPagos/static/js/runtime-main.c0dc89ae.js.map",
     "static/css/2.0f1110e3.chunk.css": "/appPagos/static/css/2.0f1110e3.chunk.css",
-    "static/js/2.6fd70db2.chunk.js": "/appPagos/static/js/2.6fd70db2.chunk.js",
-    "static/js/2.6fd70db2.chunk.js.map": "/appPagos/static/js/2.6fd70db2.chunk.js.map",
-    "static/js/3.6212851c.chunk.js": "/appPagos/static/js/3.6212851c.chunk.js",
-    "static/js/3.6212851c.chunk.js.map": "/appPagos/static/js/3.6212851c.chunk.js.map",
+    "static/js/2.69b36fcd.chunk.js": "/appPagos/static/js/2.69b36fcd.chunk.js",
+    "static/js/2.69b36fcd.chunk.js.map": "/appPagos/static/js/2.69b36fcd.chunk.js.map",
+    "static/js/3.1bc6e769.chunk.js": "/appPagos/static/js/3.1bc6e769.chunk.js",
+    "static/js/3.1bc6e769.chunk.js.map": "/appPagos/static/js/3.1bc6e769.chunk.js.map",
     "index.html": "/appPagos/index.html",
     "static/css/2.0f1110e3.chunk.css.map": "/appPagos/static/css/2.0f1110e3.chunk.css.map",
     "static/css/main.a99ad1c9.chunk.css.map": "/appPagos/static/css/main.a99ad1c9.chunk.css.map",
-    "static/js/2.6fd70db2.chunk.js.LICENSE.txt": "/appPagos/static/js/2.6fd70db2.chunk.js.LICENSE.txt",
+    "static/js/2.69b36fcd.chunk.js.LICENSE.txt": "/appPagos/static/js/2.69b36fcd.chunk.js.LICENSE.txt",
     "static/media/costo.99e2daa7.png": "/appPagos/static/media/costo.99e2daa7.png",
     "static/media/home1.7dc80fce.jpg": "/appPagos/static/media/home1.7dc80fce.jpg",
     "static/media/logo.6ce24c58.svg": "/appPagos/static/media/logo.6ce24c58.svg",
     "static/media/multiPlat.b6805eba.png": "/appPagos/static/media/multiPlat.b6805eba.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.6110baea.js",
+    "static/js/runtime-main.c0dc89ae.js",
     "static/css/2.0f1110e3.chunk.css",
-    "static/js/2.6fd70db2.chunk.js",
+    "static/js/2.69b36fcd.chunk.js",
     "static/css/main.a99ad1c9.chunk.css",
-    "static/js/main.ecb95050.chunk.js"
+    "static/js/main.603f2293.chunk.js"
   ]
 }
