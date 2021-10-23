@@ -10,12 +10,12 @@ export function Item({ todo, borrarElemento }){
   return (
     <>
     <tr>
-      <input type="checkbox" className="align-center" checked={completed} onChange={handleTodoClick}/>
       <td>{date}</td>
       <td>{time}</td>
       <td>{note}</td>
       <td>{quantity}</td>
       <td>{category}</td>
+      <td><input type="checkbox" className="align-center" checked={completed} onChange={handleTodoClick}/></td>
     </tr>
     </>
   )

@@ -161,7 +161,7 @@ const Agregar = () => {
           <div className="mt-3 py-3">
             <h3 className="text-center p-3"> Tabla de gastos: </h3>
             <Tabla todos={todos} borrarElemento={borrarElemento} handleClearAll={handleClearAll}/>
-          </div>
+        </div>
 
       </div>
     </div>
